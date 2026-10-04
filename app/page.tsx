@@ -9,8 +9,8 @@ import { useState } from "react";
 
 const COMPANY = "열정쿡탑";
 
-const PHONE = "01000000000";
-const PHONE_DISPLAY = "010-0000-0000";
+const PHONE = "01094134686";
+const PHONE_DISPLAY = "010-9413-4686";
 
 /* =====================================
    서비스 카테고리
@@ -111,10 +111,19 @@ export default function Home() {
 
           <nav className={`nav ${menuOpen ? "open" : ""}`}>
             <Link href="#services">서비스</Link>
-            <Link href="#regions">출장지역</Link>
-            <Link href="#process">작업안내</Link>
 
-            <a href={`tel:${PHONE}`} className="nav-call">
+            <Link href="#regions">
+              출장지역
+            </Link>
+
+            <Link href="#process">
+              작업안내
+            </Link>
+
+            <a
+              href={`tel:${PHONE}`}
+              className="nav-call"
+            >
               전화상담
             </a>
           </nav>
@@ -151,11 +160,17 @@ export default function Home() {
           </div>
 
           <div className="hero-buttons">
-            <a href={`tel:${PHONE}`} className="primary-button">
+            <a
+              href={`tel:${PHONE}`}
+              className="primary-button"
+            >
               ☎ 전화 상담
             </a>
 
-            <Link href="#services" className="secondary-button">
+            <Link
+              href="#services"
+              className="secondary-button"
+            >
               시공 항목 보기
             </Link>
           </div>
@@ -192,11 +207,18 @@ export default function Home() {
           서비스
       ====================================== */}
 
-      <section id="services" className="section">
+      <section
+        id="services"
+        className="section"
+      >
         <div className="section-heading">
-          <span>YEOLJEONG COOKTOP</span>
+          <span>
+            YEOLJEONG COOKTOP
+          </span>
 
-          <h2>쿡탑 전문 서비스</h2>
+          <h2>
+            쿡탑 전문 서비스
+          </h2>
 
           <p>
             제품 교체부터 상판 규격 변경과 타공까지
@@ -215,9 +237,13 @@ export default function Home() {
                 {service.icon}
               </div>
 
-              <h3>{service.title}</h3>
+              <h3>
+                {service.title}
+              </h3>
 
-              <p>{service.desc}</p>
+              <p>
+                {service.desc}
+              </p>
 
               <span className="more">
                 자세히 보기 →
@@ -228,17 +254,24 @@ export default function Home() {
       </section>
 
       {/* =====================================
-          출장지역
+          출장 지역
       ====================================== */}
 
-      <section id="regions" className="region-section">
+      <section
+        id="regions"
+        className="region-section"
+      >
         <div className="section-heading">
-          <span>NATIONWIDE SERVICE</span>
+          <span>
+            NATIONWIDE SERVICE
+          </span>
 
-          <h2>전국 출장 가능합니다</h2>
+          <h2>
+            전국 출장 가능합니다
+          </h2>
 
           <p>
-            서울부터 제주까지 지역별 상담이 가능합니다.
+            서울부터 제주까지 전국 지역별 상담이 가능합니다.
           </p>
         </div>
 
@@ -263,17 +296,28 @@ export default function Home() {
           작업 순서
       ====================================== */}
 
-      <section id="process" className="section">
+      <section
+        id="process"
+        className="section"
+      >
         <div className="section-heading">
-          <span>PROCESS</span>
+          <span>
+            PROCESS
+          </span>
 
-          <h2>쿡탑 교체 진행 과정</h2>
+          <h2>
+            쿡탑 교체 진행 과정
+          </h2>
         </div>
 
         <div className="process-grid">
           <div className="process-card">
             <b>01</b>
-            <h3>현장 사진 상담</h3>
+
+            <h3>
+              현장 사진 상담
+            </h3>
+
             <p>
               기존 쿡탑과 주방 상판 사진을 확인합니다.
             </p>
@@ -281,7 +325,11 @@ export default function Home() {
 
           <div className="process-card">
             <b>02</b>
-            <h3>제품 규격 확인</h3>
+
+            <h3>
+              제품 규격 확인
+            </h3>
+
             <p>
               기존 타공 사이즈와 신규 제품 규격을 확인합니다.
             </p>
@@ -289,7 +337,11 @@ export default function Home() {
 
           <div className="process-card">
             <b>03</b>
-            <h3>교체·타공 작업</h3>
+
+            <h3>
+              교체·타공 작업
+            </h3>
+
             <p>
               필요 시 기존 상판을 확장 또는 추가 타공합니다.
             </p>
@@ -297,7 +349,11 @@ export default function Home() {
 
           <div className="process-card">
             <b>04</b>
-            <h3>설치 확인</h3>
+
+            <h3>
+              설치 확인
+            </h3>
+
             <p>
               제품 설치 상태와 마감 상태를 최종 확인합니다.
             </p>
@@ -306,12 +362,14 @@ export default function Home() {
       </section>
 
       {/* =====================================
-          상담 CTA
+          상담 영역
       ====================================== */}
 
       <section className="cta">
         <div>
-          <span>전국 쿡탑 전문</span>
+          <span>
+            전국 쿡탑 전문
+          </span>
 
           <h2>
             교체할 제품과
@@ -325,7 +383,10 @@ export default function Home() {
           </p>
         </div>
 
-        <a href={`tel:${PHONE}`} className="cta-button">
+        <a
+          href={`tel:${PHONE}`}
+          className="cta-button"
+        >
           ☎ {PHONE_DISPLAY}
         </a>
       </section>
@@ -344,18 +405,22 @@ export default function Home() {
           주방 상판 타공 전문
         </p>
 
+        <p>
+          전화상담 {PHONE_DISPLAY}
+        </p>
+
         <p className="copyright">
           © {new Date().getFullYear()} {COMPANY}. All rights reserved.
         </p>
       </footer>
 
       {/* =====================================
-          모바일 하단 전화버튼
+          모바일 하단 전화 버튼
       ====================================== */}
 
       <div className="mobile-bottom">
         <a href={`tel:${PHONE}`}>
-          ☎ 열정쿡탑 전화상담
+          ☎ 열정쿡탑 {PHONE_DISPLAY}
         </a>
       </div>
     </main>
