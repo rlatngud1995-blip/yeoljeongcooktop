@@ -35,14 +35,14 @@ const services = [
     slug: "gas-hole-cutting",
     title: "가스 구멍 타공",
     desc: "가스배관과 제품 설치를 위해 필요한 상판 구멍 타공 작업을 진행합니다.",
-    image: "/IMG_1333.jpeg",
+    image: "/IMG_1340.jpeg",
   },
 
   {
     slug: "cooktop-cutting",
     title: "쿡탑 타공",
     desc: "신규 쿡탑 규격에 맞춰 주방 상판 확장 및 타공 작업을 진행합니다.",
-    image: "/IMG_1340.jpeg",
+    image: "/IMG_1333.jpeg",
   },
 
   {
