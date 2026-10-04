@@ -21,48 +21,54 @@ const services = [
     slug: "built-in-cooktop",
     title: "빌트인 쿡탑 교체",
     desc: "노후되거나 고장난 빌트인 쿡탑을 현장 규격에 맞춰 교체합니다.",
-    icon: "🔥",
+    image: "/IMG_1338.jpeg",
   },
+
   {
     slug: "gas-cooktop",
     title: "가스쿡탑 교체",
     desc: "기존 가스쿡탑 철거부터 새 제품 설치까지 깔끔하게 진행합니다.",
-    icon: "🍳",
+    image: "/IMG_1335.jpeg",
   },
+
   {
     slug: "gas-hole-cutting",
     title: "가스 구멍 타공",
-    desc: "가스배관 및 제품 설치에 필요한 상판 구멍 타공 작업을 진행합니다.",
-    icon: "🛠️",
+    desc: "가스배관과 제품 설치를 위해 필요한 상판 구멍 타공 작업을 진행합니다.",
+    image: "/IMG_1333.jpeg",
   },
+
   {
     slug: "cooktop-cutting",
     title: "쿡탑 타공",
-    desc: "인조대리석 및 주방 상판의 쿡탑 규격 변경과 확장 타공을 진행합니다.",
-    icon: "📐",
+    desc: "신규 쿡탑 규격에 맞춰 주방 상판 확장 및 타공 작업을 진행합니다.",
+    image: "/IMG_1340.jpeg",
   },
+
   {
     slug: "induction",
     title: "인덕션 교체",
     desc: "기존 쿡탑 철거 후 인덕션 설치 및 규격 확인을 진행합니다.",
-    icon: "⚡",
+    image: "/IMG_1334.jpeg",
   },
+
   {
     slug: "cooktop",
     title: "쿡탑 교체",
     desc: "다양한 브랜드와 규격의 쿡탑을 현장 상황에 맞춰 교체합니다.",
-    icon: "🔧",
+    image: "/IMG_1337.jpeg",
   },
+
   {
     slug: "gas-range",
     title: "가스레인지 교체",
-    desc: "빌트인 및 일반 가스레인지 철거·교체 작업을 진행합니다.",
-    icon: "♨️",
+    desc: "기존 가스레인지 철거 후 신규 가스레인지로 교체합니다.",
+    image: "/IMG_1336.jpeg",
   },
 ];
 
 /* =====================================
-   전국 주요 지역
+   전국 지역
 ===================================== */
 
 const regions = [
@@ -86,31 +92,46 @@ const regions = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] =
+    useState(false);
 
   return (
     <main>
       {/* =====================================
-          상단 메뉴
+          HEADER
       ====================================== */}
 
       <header className="header">
         <div className="header-inner">
-          <Link href="/" className="logo">
-            <span className="logo-icon">🔥</span>
+          <Link
+            href="/"
+            className="logo"
+          >
+            <span className="logo-icon">
+              🔥
+            </span>
+
             <span>{COMPANY}</span>
           </Link>
 
           <button
             className="menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
             aria-label="메뉴 열기"
           >
             ☰
           </button>
 
-          <nav className={`nav ${menuOpen ? "open" : ""}`}>
-            <Link href="#services">서비스</Link>
+          <nav
+            className={`nav ${
+              menuOpen ? "open" : ""
+            }`}
+          >
+            <Link href="#services">
+              서비스
+            </Link>
 
             <Link href="#regions">
               출장지역
@@ -131,7 +152,7 @@ export default function Home() {
       </header>
 
       {/* =====================================
-          메인 히어로
+          HERO
       ====================================== */}
 
       <section className="hero">
@@ -143,20 +164,36 @@ export default function Home() {
           <h1>
             쿡탑 교체부터
             <br />
-            <strong>상판 타공까지 한번에</strong>
+
+            <strong>
+              상판 타공까지 한번에
+            </strong>
           </h1>
 
           <p className="hero-description">
-            빌트인쿡탑 · 가스쿡탑 · 인덕션 · 가스레인지
+            빌트인쿡탑 · 가스쿡탑 ·
+            인덕션 · 가스레인지
             <br />
-            교체와 주방 상판 타공을 전문으로 진행합니다.
+            교체와 주방 상판 타공을
+            전문으로 진행합니다.
           </p>
 
           <div className="hero-keywords">
-            <span>빌트인쿡탑교체</span>
-            <span>가스쿡탑교체</span>
-            <span>쿡탑타공</span>
-            <span>인덕션교체</span>
+            <span>
+              빌트인쿡탑교체
+            </span>
+
+            <span>
+              가스쿡탑교체
+            </span>
+
+            <span>
+              쿡탑타공
+            </span>
+
+            <span>
+              인덕션교체
+            </span>
           </div>
 
           <div className="hero-buttons">
@@ -178,33 +215,53 @@ export default function Home() {
       </section>
 
       {/* =====================================
-          핵심 안내
+          QUICK INFO
       ====================================== */}
 
       <section className="quick-info">
         <div className="quick-card">
-          <strong>전국 출장</strong>
-          <span>전국 시·군·구 상담</span>
+          <strong>
+            전국 출장
+          </strong>
+
+          <span>
+            전국 시·군·구 상담
+          </span>
         </div>
 
         <div className="quick-card">
-          <strong>규격 확인</strong>
-          <span>제품·타공 사이즈 확인</span>
+          <strong>
+            규격 확인
+          </strong>
+
+          <span>
+            제품·타공 사이즈 확인
+          </span>
         </div>
 
         <div className="quick-card">
-          <strong>교체 + 타공</strong>
-          <span>한 번에 시공 가능</span>
+          <strong>
+            교체 + 타공
+          </strong>
+
+          <span>
+            한 번에 시공 가능
+          </span>
         </div>
 
         <div className="quick-card">
-          <strong>전문 상담</strong>
-          <span>현장 사진 상담 가능</span>
+          <strong>
+            전문 상담
+          </strong>
+
+          <span>
+            현장 사진 상담 가능
+          </span>
         </div>
       </section>
 
       {/* =====================================
-          서비스
+          SERVICE
       ====================================== */}
 
       <section
@@ -221,40 +278,49 @@ export default function Home() {
           </h2>
 
           <p>
-            제품 교체부터 상판 규격 변경과 타공까지
-            현장 상황에 맞춰 작업합니다.
+            제품 교체부터 상판 규격
+            변경과 타공까지 현장
+            상황에 맞춰 작업합니다.
           </p>
         </div>
 
         <div className="service-grid">
-          {services.map((service) => (
-            <Link
-              href={`/services/${service.slug}`}
-              className="service-card"
-              key={service.slug}
-            >
-              <div className="service-icon">
-                {service.icon}
-              </div>
+          {services.map(
+            (service) => (
+              <Link
+                href={`/services/${service.slug}`}
+                className="service-card"
+                key={service.slug}
+              >
+                <div className="service-image-wrap">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} 열정쿡탑`}
+                    className="service-image"
+                  />
+                </div>
 
-              <h3>
-                {service.title}
-              </h3>
+                <div className="service-content">
+                  <h3>
+                    {service.title}
+                  </h3>
 
-              <p>
-                {service.desc}
-              </p>
+                  <p>
+                    {service.desc}
+                  </p>
 
-              <span className="more">
-                자세히 보기 →
-              </span>
-            </Link>
-          ))}
+                  <span className="more">
+                    자세히 보기 →
+                  </span>
+                </div>
+              </Link>
+            )
+          )}
         </div>
       </section>
 
       {/* =====================================
-          출장 지역
+          REGION
       ====================================== */}
 
       <section
@@ -271,29 +337,33 @@ export default function Home() {
           </h2>
 
           <p>
-            서울부터 제주까지 전국 지역별 상담이 가능합니다.
+            서울부터 제주까지 전국
+            지역별 상담이 가능합니다.
           </p>
         </div>
 
         <div className="region-grid">
-          {regions.map((region) => (
-            <Link
-              href={`/regions/${region}`}
-              key={region}
-              className="region-button"
-            >
-              {region}
-            </Link>
-          ))}
+          {regions.map(
+            (region) => (
+              <div
+                key={region}
+                className="region-button"
+              >
+                {region}
+              </div>
+            )
+          )}
         </div>
 
         <p className="region-notice">
-          ※ 지역 및 현장 상황에 따라 출장 가능 여부가 달라질 수 있습니다.
+          ※ 지역 및 현장 상황에 따라
+          출장 가능 여부가 달라질 수
+          있습니다.
         </p>
       </section>
 
       {/* =====================================
-          작업 순서
+          PROCESS
       ====================================== */}
 
       <section
@@ -319,7 +389,8 @@ export default function Home() {
             </h3>
 
             <p>
-              기존 쿡탑과 주방 상판 사진을 확인합니다.
+              기존 쿡탑과 주방 상판
+              사진을 확인합니다.
             </p>
           </div>
 
@@ -331,7 +402,8 @@ export default function Home() {
             </h3>
 
             <p>
-              기존 타공 사이즈와 신규 제품 규격을 확인합니다.
+              기존 타공 사이즈와 신규
+              제품 규격을 확인합니다.
             </p>
           </div>
 
@@ -343,7 +415,8 @@ export default function Home() {
             </h3>
 
             <p>
-              필요 시 기존 상판을 확장 또는 추가 타공합니다.
+              필요 시 기존 상판을
+              확장 또는 추가 타공합니다.
             </p>
           </div>
 
@@ -355,14 +428,15 @@ export default function Home() {
             </h3>
 
             <p>
-              제품 설치 상태와 마감 상태를 최종 확인합니다.
+              제품 설치 상태와 마감
+              상태를 최종 확인합니다.
             </p>
           </div>
         </div>
       </section>
 
       {/* =====================================
-          상담 영역
+          CTA
       ====================================== */}
 
       <section className="cta">
@@ -378,8 +452,9 @@ export default function Home() {
           </h2>
 
           <p>
-            현장 사진과 제품 모델명을 확인하면
-            더욱 정확한 상담이 가능합니다.
+            현장 사진과 제품 모델명을
+            확인하면 더욱 정확한 상담이
+            가능합니다.
           </p>
         </div>
 
@@ -392,7 +467,7 @@ export default function Home() {
       </section>
 
       {/* =====================================
-          하단
+          FOOTER
       ====================================== */}
 
       <footer className="footer">
@@ -401,8 +476,9 @@ export default function Home() {
         </div>
 
         <p>
-          전국 쿡탑 · 인덕션 · 가스레인지 교체 및
-          주방 상판 타공 전문
+          전국 쿡탑 · 인덕션 ·
+          가스레인지 교체 및 주방
+          상판 타공 전문
         </p>
 
         <p>
@@ -410,12 +486,13 @@ export default function Home() {
         </p>
 
         <p className="copyright">
-          © {new Date().getFullYear()} {COMPANY}. All rights reserved.
+          © {new Date().getFullYear()}{" "}
+          {COMPANY}. All rights reserved.
         </p>
       </footer>
 
       {/* =====================================
-          모바일 하단 전화 버튼
+          MOBILE CALL
       ====================================== */}
 
       <div className="mobile-bottom">
