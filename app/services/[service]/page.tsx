@@ -53,7 +53,7 @@ const services = {
       "가스구멍타공",
 
     image:
-      "/IMG_1333.jpeg",
+      "/IMG_1340.jpeg",
 
     description:
       "가스배관과 제품 설치에 필요한 주방 상판 구멍 타공 작업을 진행합니다.",
@@ -67,7 +67,7 @@ const services = {
       "쿡탑타공",
 
     image:
-      "/IMG_1340.jpeg",
+      "/IMG_1333.jpeg",
 
     description:
       "신규 쿡탑 규격에 맞지 않는 기존 주방 상판을 확인하여 확장 및 타공 작업을 진행합니다.",
@@ -214,12 +214,10 @@ export default async function ServicePage({
           style={{
             maxWidth: "1180px",
             margin: "0 auto",
-
             display: "flex",
             alignItems: "center",
             justifyContent:
               "space-between",
-
             gap: "15px",
           }}
         >
@@ -240,18 +238,13 @@ export default async function ServicePage({
             style={{
               background:
                 "#ff5a1f",
-
               color: "#fff",
-
               padding:
                 "10px 16px",
-
               borderRadius:
                 "999px",
-
               textDecoration:
                 "none",
-
               fontSize: "13px",
               fontWeight: 900,
             }}
@@ -284,16 +277,12 @@ export default async function ServicePage({
               width: "100%",
               height:
                 "clamp(250px,55vw,520px)",
-
               borderRadius:
                 "22px",
-
               overflow:
                 "hidden",
-
               marginBottom:
                 "32px",
-
               background:
                 "#222",
             }}
@@ -302,16 +291,12 @@ export default async function ServicePage({
               src={
                 currentService.image
               }
-
               alt={`${currentService.title} 열정쿡탑`}
-
               style={{
                 width: "100%",
                 height: "100%",
-
                 objectFit:
                   "cover",
-
                 display:
                   "block",
               }}
@@ -322,22 +307,16 @@ export default async function ServicePage({
             style={{
               display:
                 "inline-block",
-
               background:
                 "#ff5a1f",
-
               padding:
                 "7px 14px",
-
               borderRadius:
                 "999px",
-
               fontSize:
                 "13px",
-
               fontWeight:
                 900,
-
               marginBottom:
                 "18px",
             }}
@@ -348,16 +327,12 @@ export default async function ServicePage({
           <h1
             style={{
               margin: 0,
-
               fontSize:
                 "clamp(32px,7vw,55px)",
-
               lineHeight:
                 1.15,
-
               letterSpacing:
                 "-2px",
-
               fontWeight:
                 950,
             }}
@@ -369,16 +344,12 @@ export default async function ServicePage({
             style={{
               maxWidth:
                 "750px",
-
               margin:
                 "20px 0 0",
-
               color:
                 "#ddd",
-
               lineHeight:
                 1.85,
-
               fontSize:
                 "16px",
             }}
@@ -393,25 +364,18 @@ export default async function ServicePage({
             style={{
               display:
                 "inline-block",
-
               marginTop:
                 "25px",
-
               background:
                 "#ff5a1f",
-
               color:
                 "#fff",
-
               textDecoration:
                 "none",
-
               padding:
                 "15px 22px",
-
               borderRadius:
                 "12px",
-
               fontWeight:
                 900,
             }}
@@ -429,10 +393,8 @@ export default async function ServicePage({
         style={{
           maxWidth:
             "1100px",
-
           margin:
             "0 auto",
-
           padding:
             "50px 18px 20px",
         }}
@@ -441,13 +403,10 @@ export default async function ServicePage({
           style={{
             background:
               "#fff",
-
             borderRadius:
               "20px",
-
             padding:
               "28px",
-
             border:
               "1px solid #ececec",
           }}
@@ -456,10 +415,8 @@ export default async function ServicePage({
             style={{
               color:
                 "#ff5a1f",
-
               fontWeight:
                 900,
-
               fontSize:
                 "13px",
             }}
@@ -471,10 +428,8 @@ export default async function ServicePage({
             style={{
               margin:
                 "8px 0 15px",
-
               fontSize:
                 "28px",
-
               letterSpacing:
                 "-1px",
             }}
@@ -486,25 +441,18 @@ export default async function ServicePage({
           <p
             style={{
               margin: 0,
-
               color:
                 "#555",
-
               fontSize:
                 "15px",
-
               lineHeight:
                 1.9,
             }}
           >
-            기존 제품의
-            모델과 규격,
-            주방 상판의
-            타공 사이즈를
-            확인한 후 현장
-            상황에 맞는
-            교체 및 설치
-            방법을 안내합니다.
+            기존 제품의 모델과 규격,
+            주방 상판의 타공 사이즈를
+            확인한 후 현장 상황에 맞는
+            교체 및 설치 방법을 안내합니다.
           </p>
         </div>
       </section>
@@ -517,10 +465,8 @@ export default async function ServicePage({
         style={{
           maxWidth:
             "1180px",
-
           margin:
             "0 auto",
-
           padding:
             "35px 18px 120px",
         }}
@@ -535,10 +481,8 @@ export default async function ServicePage({
             style={{
               color:
                 "#ff5a1f",
-
               fontSize:
                 "13px",
-
               fontWeight:
                 900,
             }}
@@ -550,10 +494,8 @@ export default async function ServicePage({
             style={{
               margin:
                 "7px 0 10px",
-
               fontSize:
                 "30px",
-
               letterSpacing:
                 "-1.4px",
             }}
@@ -566,10 +508,8 @@ export default async function ServicePage({
           <p
             style={{
               margin: 0,
-
               color:
                 "#666",
-
               lineHeight:
                 1.7,
             }}
@@ -587,7 +527,6 @@ export default async function ServicePage({
           style={{
             display:
               "grid",
-
             gap:
               "22px",
           }}
@@ -601,16 +540,12 @@ export default async function ServicePage({
                 style={{
                   background:
                     "#fff",
-
                   borderRadius:
                     "18px",
-
                   padding:
                     "23px",
-
                   border:
                     "1px solid #ececec",
-
                   boxShadow:
                     "0 6px 25px rgba(0,0,0,0.04)",
                 }}
@@ -619,13 +554,10 @@ export default async function ServicePage({
                   style={{
                     display:
                       "flex",
-
                     justifyContent:
                       "space-between",
-
                     alignItems:
                       "center",
-
                     marginBottom:
                       "17px",
                   }}
@@ -633,10 +565,8 @@ export default async function ServicePage({
                   <h3
                     style={{
                       margin: 0,
-
                       fontSize:
                         "21px",
-
                       fontWeight:
                         900,
                     }}
@@ -650,7 +580,6 @@ export default async function ServicePage({
                     style={{
                       fontSize:
                         "12px",
-
                       color:
                         "#888",
                     }}
@@ -668,10 +597,8 @@ export default async function ServicePage({
                   style={{
                     display:
                       "grid",
-
                     gridTemplateColumns:
                       "repeat(auto-fit,minmax(105px,1fr))",
-
                     gap:
                       "9px",
                   }}
@@ -682,36 +609,26 @@ export default async function ServicePage({
                     ) => (
                       <Link
                         key={`${region.slug}-${district}`}
-
                         href={`/services/${service}/${region.slug}/${encodeURIComponent(
                           district
                         )}`}
-
                         style={{
                           padding:
                             "12px 8px",
-
                           background:
                             "#f8f8f8",
-
                           border:
                             "1px solid #e9e9e9",
-
                           color:
                             "#222",
-
                           borderRadius:
                             "10px",
-
                           textAlign:
                             "center",
-
                           textDecoration:
                             "none",
-
                           fontSize:
                             "14px",
-
                           fontWeight:
                             750,
                         }}
@@ -737,17 +654,13 @@ export default async function ServicePage({
         style={{
           position:
             "fixed",
-
           bottom: 0,
           left: 0,
           right: 0,
-
           zIndex:
             999,
-
           background:
             "#111",
-
           padding:
             "11px 14px calc(11px + env(safe-area-inset-bottom))",
         }}
@@ -757,31 +670,22 @@ export default async function ServicePage({
           style={{
             display:
               "block",
-
             maxWidth:
               "700px",
-
             margin:
               "0 auto",
-
             padding:
               "14px",
-
             background:
               "#ff5a1f",
-
             color:
               "#fff",
-
             textDecoration:
               "none",
-
             textAlign:
               "center",
-
             borderRadius:
               "12px",
-
             fontWeight:
               900,
           }}
