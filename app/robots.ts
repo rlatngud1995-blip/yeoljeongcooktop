@@ -1,14 +1,27 @@
-import type { MetadataRoute } from "next";
+import type {
+  MetadataRoute,
+} from "next";
 
-const SITE_URL = "https://www.yeoljeongcooktop.com";
+/* =====================================
+   열정쿡탑 robots.txt
+===================================== */
 
-export default function robots(): MetadataRoute.Robots {
+const SITE_URL =
+  "https://www.yeoljeongcooktop.com";
+
+export default function robots():
+  MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+    ],
 
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap:
+      `${SITE_URL}/sitemap.xml`,
+
+    host: SITE_URL,
   };
 }
