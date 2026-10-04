@@ -67,48 +67,20 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-
-    googleBot: {
-      index: true,
-      follow: true,
-    },
   },
 
   openGraph: {
     type: "website",
-
     locale: "ko_KR",
-
     url: SITE_URL,
-
     siteName: SITE_NAME,
-
     title: SITE_TITLE,
-
     description: SITE_DESCRIPTION,
   },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title: SITE_TITLE,
-
-    description: SITE_DESCRIPTION,
-  },
-
-  /*
-    네이버 서치어드바이저에서
-    메타태그 인증값을 받은 뒤
-
-    아래 "" 안에 인증값만 넣으면 됨.
-
-    예:
-    "naver-site-verification":
-      "123456abcdef"
-  */
 
   other: {
-    "naver-site-verification": "",
+    "naver-site-verification":
+      "b030641217f030cd4eac5a1c5e8a27f0ea42b3cf",
   },
 };
 
