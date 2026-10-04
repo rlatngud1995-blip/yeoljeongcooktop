@@ -13,6 +13,13 @@ const SITE_NAME = "열정쿡탑";
 const PHONE = "010-9413-4686";
 
 /* =====================================
+   열정쿡탑 로고 / 파비콘
+===================================== */
+
+const LOGO_IMAGE =
+  "/4B9CECF0-6F95-44F2-8A80-8D754551CD89.png";
+
+/* =====================================
    메인 검색 제목 / 설명
 ===================================== */
 
@@ -44,6 +51,33 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: SITE_URL,
+  },
+
+  /* =====================================
+     파비콘 / 앱 아이콘
+  ===================================== */
+
+  icons: {
+    icon: [
+      {
+        url: LOGO_IMAGE,
+        type: "image/png",
+      },
+    ],
+
+    shortcut: [
+      {
+        url: LOGO_IMAGE,
+        type: "image/png",
+      },
+    ],
+
+    apple: [
+      {
+        url: LOGO_IMAGE,
+        type: "image/png",
+      },
+    ],
   },
 
   /* =====================================
@@ -79,7 +113,7 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
 
   /* =====================================
-     검색엔진 수집 허용
+     검색엔진 수집
   ===================================== */
 
   robots: {
@@ -113,6 +147,18 @@ export const metadata: Metadata = {
 
     description:
       "전국 빌트인쿡탑, 가스쿡탑, 인덕션, 가스레인지 교체 및 주방 상판 타공 전문 열정쿡탑입니다.",
+
+    images: [
+      {
+        url: LOGO_IMAGE,
+
+        width: 1200,
+        height: 1200,
+
+        alt:
+          "열정쿡탑 쿡탑교체 및 쿡탑타공 전문",
+      },
+    ],
   },
 
   /* =====================================
@@ -120,17 +166,21 @@ export const metadata: Metadata = {
   ===================================== */
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
 
     title:
       "열정쿡탑 | 전국 쿡탑교체·쿡탑타공 전문",
 
     description:
       "전국 쿡탑·인덕션·가스레인지 교체와 주방 상판 타공 상담.",
+
+    images: [
+      LOGO_IMAGE,
+    ],
   },
 
   /* =====================================
-     네이버 서치어드바이저 소유확인
+     네이버 서치어드바이저
   ===================================== */
 
   other: {
@@ -153,23 +203,39 @@ export default function RootLayout({
   ===================================== */
 
   const businessJsonLd = {
-    "@context": "https://schema.org",
+    "@context":
+      "https://schema.org",
 
-    "@type": "HomeAndConstructionBusiness",
+    "@type":
+      "HomeAndConstructionBusiness",
 
-    "@id": `${SITE_URL}/#business`,
+    "@id":
+      `${SITE_URL}/#business`,
 
-    name: SITE_NAME,
+    name:
+      SITE_NAME,
 
-    url: SITE_URL,
+    url:
+      SITE_URL,
 
-    telephone: PHONE,
+    logo:
+      `${SITE_URL}${LOGO_IMAGE}`,
 
-    description: SITE_DESCRIPTION,
+    image:
+      `${SITE_URL}${LOGO_IMAGE}`,
+
+    telephone:
+      PHONE,
+
+    description:
+      SITE_DESCRIPTION,
 
     areaServed: {
-      "@type": "Country",
-      name: "대한민국",
+      "@type":
+        "Country",
+
+      name:
+        "대한민국",
     },
 
     serviceType: [
@@ -188,22 +254,30 @@ export default function RootLayout({
   ===================================== */
 
   const websiteJsonLd = {
-    "@context": "https://schema.org",
+    "@context":
+      "https://schema.org",
 
-    "@type": "WebSite",
+    "@type":
+      "WebSite",
 
-    "@id": `${SITE_URL}/#website`,
+    "@id":
+      `${SITE_URL}/#website`,
 
-    name: SITE_NAME,
+    name:
+      SITE_NAME,
 
-    url: SITE_URL,
+    url:
+      SITE_URL,
 
-    description: SITE_DESCRIPTION,
+    description:
+      SITE_DESCRIPTION,
 
-    inLanguage: "ko-KR",
+    inLanguage:
+      "ko-KR",
 
     publisher: {
-      "@id": `${SITE_URL}/#business`,
+      "@id":
+        `${SITE_URL}/#business`,
     },
   };
 
@@ -211,7 +285,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         {/* =====================================
-            모바일 화면
+            모바일
         ====================================== */}
 
         <meta
@@ -225,15 +299,37 @@ export default function RootLayout({
         />
 
         {/* =====================================
+            파비콘 강제 지정
+        ====================================== */}
+
+        <link
+          rel="icon"
+          type="image/png"
+          href={LOGO_IMAGE}
+        />
+
+        <link
+          rel="shortcut icon"
+          type="image/png"
+          href={LOGO_IMAGE}
+        />
+
+        <link
+          rel="apple-touch-icon"
+          href={LOGO_IMAGE}
+        />
+
+        {/* =====================================
             구조화 데이터 - 업체
         ====================================== */}
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              businessJsonLd
-            ),
+            __html:
+              JSON.stringify(
+                businessJsonLd
+              ),
           }}
         />
 
@@ -244,14 +340,17 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              websiteJsonLd
-            ),
+            __html:
+              JSON.stringify(
+                websiteJsonLd
+              ),
           }}
         />
       </head>
 
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
